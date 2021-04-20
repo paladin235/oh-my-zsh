@@ -7,7 +7,7 @@ function ssh_connection() {
     fi
 }
 
-PROMPT='${return_code}$(ssh_connection)%{$fg[$NCOLOR]%}%B%n@%m%b%{$reset_color%}:%{$fg[blue]%}%B%~%b%{$reset_color%} $(git_prompt_info)
+PROMPT='${return_code}$(ssh_connection)%{$fg[$NCOLOR]%}%B%n@%m%b%{$reset_color%}:%{$fg[blue]%}%B%~%b%{$reset_color%} $(git_prompt_info) $(git_prompt_short_sha)
 %(!.#.$) '
 RPROMPT='$(vi_mode_prompt_info)[%D{%a %b %d %H:%M:%S}]'
 
